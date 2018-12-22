@@ -1,0 +1,40 @@
+Script started on Sun 25 Nov 2018 03:32:10 PM EST
+eoneil@pe07:~/630/hw4soln$ ls
+bku                    FindRestaurants.java~                query2.sql
+createuserdb.sql       FindRestaurants_oracle.txt           query2.sql~
+dropuserdb.sql         FindRestaurants_oracle.txt~          sf_apt_rating.sql
+EditUser.java          grant                                sf_apt_rating.sql~
+EmailList.java         hsqldb.jar                           sf_distance1.sql
+EmailList.txt          JdbcCheckup_devsys.txt               sf_distance_mysql1.sql
+exit                   JdbcCheckup_topcat.txt               sf_distance_mysql.sql
+FindFlights.class      mysql-connector-java-5.1.43-bin.jar  sf_distance.sql
+FindFlights.java       MysqlDistanceExample.sql             sp_distance1.sql~
+FindFlights.java~      MysqlDistanceExample.sql~            sp_distance_mysql1.sql~
+FindFlights.txt        mysql-proc.out                       sp_distance_mysql.sql~
+FindPilot.java         mysql-procs.out                      sp_distance.sql~
+FindPilot.txt          ojdbc6.jar                           typescript
+FindRestaurants.class  OracleDistanceExample.sql            UserDB.java
+FindRestaurants.java   OracleDistanceExample.sql~           User.java
+eoneil@pe07:~/630/hw4soln$ java -cp  mysql-connector-java-5.1.43-bin.jar [K:. FindRestaurants
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? m
+user: eoneil1
+password: eoneil1
+use canned MySql connection string (y/n): y
+host: localhost
+port (often 3306): 3306
+using connection string: jdbc:mysql://localhost:3306/eoneil1db
+Connecting to the database...Sun Nov 25 15:33:06 EST 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+connected.
+Enter apartment listing: 25
+
+Restaurants within 200 m radius from apartment with at least 10 reviews:
+
+Business                                                Rating             Reviews
+
+Jack in the Box                                         1.5                     15
+Taco Time                                               3.0                     32
+eoneil@pe07:~/630/hw4soln$ exit
+exit
+
+Script done on Sun 25 Nov 2018 03:33:13 PM EST

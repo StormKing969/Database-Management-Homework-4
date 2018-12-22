@@ -1,0 +1,34 @@
+Script started on Sun 25 Nov 2018 03:29:12 PM EST
+eoneil@pe07:~/630/hw4soln$ !javac
+javac FindFlights.java
+eoneil@pe07:~/630/hw4soln$ java -cp ojdbc6.jar:. KFindRestaurants
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: cs630test
+password: cs630test
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+Enter apartment listing: 25
+
+Restaurants within 200 m radius from apartment with at least 10 reviews:
+
+Business                                                Rating             Reviews
+
+Jack in the Box                                         3.0                     23
+Philly Steak Express                                    3.5                    172
+Quiznos                                                 3.0                     25
+North End Pizza                                         3.0                    276
+Vegeway                                                 4.0                    102
+Waffles Cafe                                            4.0                    246
+Braddah's Island Style                                  4.0                    237
+Chip Off The Block Deli                                 4.0                     62
+Distill - A Local Bar                                   3.5                     95
+Domino's Pizza                                          2.5                     28
+eoneil@pe07:~/630/hw4soln$ exit
+exit
+
+Script done on Sun 25 Nov 2018 03:30:44 PM EST

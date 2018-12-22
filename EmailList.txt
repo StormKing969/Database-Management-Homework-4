@@ -1,0 +1,106 @@
+Script started on Tue 28 Nov 2017 12:45:56 PM EST
+
+eoneil@topcat$ sqlplus cs630test/cs630test@//dbs3.cs.umb.edu/dbs3<dropuserdb.sql
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Nov 28 12:46:05 2017
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Nov 28 2017 12:45:19 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> 
+Table dropped.
+
+SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+
+eoneil@topcat$ sqlplus cs630test/cs630test@//dbs3.cs.umb.edu/dbs3<createuserdb.sql
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Nov 28 12:46:17 2017
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Nov 28 2017 12:47:49 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL>   2  
+Table created.
+
+SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+java -cp ojdbc6.jar:. EmailList
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information for connection to the database
+Using Oracle (o) or MySql (m)? o
+Oracle username: cs630test
+Oracle password: cs630test
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+To add a member to the email list, enter name and email as follows:
+Enter firstName: Sue
+Enter lastName: Wong
+Enter email: swong@gmail.com
+New user Sue is now registered.
+eoneil@topcat:~/630/hw4soln$ java -cp ojdbc6.jar:. EditUser
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information for connection to the database
+Using Oracle (o) or MySql (m)? o
+Oracle username: cs630test
+Oracle password: cs630test
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+Enter email of user to view: swong@gmail.com
+First Name: Sue
+Last Name: Wong
+Email: swong@gmail.com
+Enter new first name or CR for no changeSusan
+Enter new last name or CR for no change
+
+Not required: Look at table to see new value:
+
+eoneil@topcat$ sqlplus cs630test/cs630test@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Nov 28 12:52:45 2017
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Nov 28 2017 12:49:52 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> select * from userdb;
+
+EMAIL                                    FIRSTNAME
+---------------------------------------- ------------------------------
+LASTNAME
+------------------------------
+swong@gmail.com                          Susan
+Wong
+
+
+SQL> exit 
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+eoneil@topcat:~/630/hw4soln$ exit
+exit
+
+Script done on Tue 28 Nov 2017 12:53:00 PM EST

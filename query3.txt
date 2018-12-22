@@ -1,0 +1,94 @@
+Script started on Sun 25 Nov 2018 03:44:00 PM EST
+eoneil@pe07:~/630/hw4soln$ !sq
+sqlplus cs630test/cs630test@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Sun Nov 25 15:44:04 2018
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Sun Nov 25 2018 15:23:37 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> set echo on
+SQL> @query3.. sql
+SQL> SELECT b.name, b.stars, b.review_count FROM yelp_db.business b, yelp_db.category c
+  2   WHERE b.id = c.business_id AND b.city = 'Las Vegas' AND b.state = 'NV' AND
+  3   c.category = 'Restaurants' AND 200 >
+  4   sdo_geom.sdo_distance (
+  5     sdo_geometry (2001, 4326, null, sdo_elem_info_array(1, 1, 1),
+  6       sdo_ordinate_array(
+  7         (SELECT a.longitude FROM yelp_db.apartments a WHERE a.listing = 25),
+  8         (SELECT a.latitude FROM yelp_db.apartments a WHERE a.listing = 25)
+  9      )),
+ 10     sdo_geometry (2001,4326, null, sdo_elem_info_array(1, 1, 1),
+ 11       sdo_ordinate_array(
+ 12         b.longitude, b.latitude
+ 13      )),
+ 14    1, 'unit=M')
+ 15   GROUP BY b.id, b.name, b.stars, b.review_count
+ 16   HAVING b.review_count > 9;
+
+
+NAME
+--------------------------------------------------------------------------------
+     STARS REVIEW_COUNT
+---------- ------------
+Vegeway
+  4.0E+000          102
+
+Quiznos
+  3.0E+000           25
+
+Jack in the Box
+  3.0E+000           23
+
+
+NAME
+--------------------------------------------------------------------------------
+     STARS REVIEW_COUNT
+---------- ------------
+Waffles Cafe
+  4.0E+000          246
+
+Braddah's Island Style
+  4.0E+000          237
+
+Distill - A Local Bar
+  3.5E+000           95
+
+
+NAME
+--------------------------------------------------------------------------------
+     STARS REVIEW_COUNT
+---------- ------------
+Philly Steak Express
+  3.5E+000          172
+
+Domino's Pizza
+  2.5E+000           28
+
+North End Pizza
+  3.0E+000          276
+
+
+NAME
+--------------------------------------------------------------------------------
+     STARS REVIEW_COUNT
+---------- ------------
+Chip Off The Block Deli
+  4.0E+000           62
+
+
+10 rows selected.
+
+SQL> 
+SQL> SQL> exit
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+eoneil@pe07:~/630/hw4soln$ exit
+exit
+
+Script done on Sun 25 Nov 2018 03:44:42 PM EST

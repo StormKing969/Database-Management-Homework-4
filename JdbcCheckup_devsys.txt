@@ -1,0 +1,17 @@
+D:\Documents\Eclipse Workspaces\cs630>java JdbcCheckup
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? y
+user: lException in thread "main"
+D:\Documents\Eclipse Workspaces\cs630>java -classpath ojdbc6.jar;. JdbcCheckup
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: lchen
+password: lchen
+use canned Oracle connection string (y/n): y
+host: localhost
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@localhost:1521:dbs3
+Connecting to the database...connected.
+Hello World!
+Your JDBC installation is correct.

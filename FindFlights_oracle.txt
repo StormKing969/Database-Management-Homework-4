@@ -1,0 +1,51 @@
+Script started on Sat 15 Apr 2017 04:31:04 PM EDT
+lchen@topcat:~/cs630/hw4$ java -cp ojdbc6.jar:. JdbcCheckup[K[K[K[K[K[K[K[K[K[K[KFindFlights
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: lchen
+password: lchen
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+origin city: Los-Angeles
+destination city: Honolulu
+Flight: 33 Distance: 2551 Duration: 02:00
+Flight: 34 Distance: 2551 Duration: 02:33
+lchen@topcat:~/cs630/hw4$ java -cp ojdbc6.jar:. JdbcCheckup[K[K[K[K[K[K[K[K[K[K[KFindFlights
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: lchen
+password: lchen
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+origin city: Los-Angeles
+destination city: Sydney
+Flight: 7 Distance: 7487 Duration: 31:40
+lchen@topcat:~/cs630/hw4$ java -cp ojdbc6.jar:. JdbcCheckup[K[K[K[K[K[K[K[K[K[K[KFindFlights
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: lchen
+password: lchen
+use canned Oracle connection string (y/n): y
+host: dbs3., cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+origin city: Madison  
+destination city: Chicago
+Flight: 4884 Distance: 84 Duration: 00:50
+lchen@topcat:~/cs630/hw4$ exit
+exit
+
+Script done on Sat 15 Apr 2017 04:33:41 PM EDT

@@ -1,0 +1,81 @@
+Script started on Sun 25 Nov 2018 04:18:04 PM EST
+eoneil@pe07:~/630/hw4soln$ !sq
+sqlplus cs630test/cs630test@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Sun Nov 25 16:18:07 2018
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Sun Nov 25 2018 15:58:17 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> set en cho on
+SQL> @query2
+SQL> select f.*, f.arrives-f.departs as delta from flights f where f.origin = 'Los-Angeles' and f.destination = 'Honolulu';
+
+      FLNO ORIGIN               DESTINATION            DISTANCE
+---------- -------------------- -------------------- ----------
+DEPARTS
+---------------------------------------------------------------------------
+ARRIVES
+---------------------------------------------------------------------------
+     PRICE
+----------
+DELTA
+---------------------------------------------------------------------------
+        33 Los-Angeles          Honolulu                   2551
+12-APR-05 09.15.00.000000 AM
+12-APR-05 11.15.00.000000 AM
+
+      FLNO ORIGIN               DESTINATION            DISTANCE
+---------- -------------------- -------------------- ----------
+DEPARTS
+---------------------------------------------------------------------------
+ARRIVES
+---------------------------------------------------------------------------
+     PRICE
+----------
+DELTA
+---------------------------------------------------------------------------
+    375.23
++000000000 02:00:00.000000
+
+
+      FLNO ORIGIN               DESTINATION            DISTANCE
+---------- -------------------- -------------------- ----------
+DEPARTS
+---------------------------------------------------------------------------
+ARRIVES
+---------------------------------------------------------------------------
+     PRICE
+----------
+DELTA
+---------------------------------------------------------------------------
+        34 Los-Angeles          Honolulu                   2551
+12-APR-05 12.45.00.000000 PM
+12-APR-05 03.18.00.000000 PM
+
+      FLNO ORIGIN               DESTINATION            DISTANCE
+---------- -------------------- -------------------- ----------
+DEPARTS
+---------------------------------------------------------------------------
+ARRIVES
+---------------------------------------------------------------------------
+     PRICE
+----------
+DELTA
+---------------------------------------------------------------------------
+    425.98
++000000000 02:33:00.000000
+
+
+SQL> exit
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+eoneil@pe07:~/630/hw4soln$ exit
+exit
+
+Script done on Sun 25 Nov 2018 04:18:23 PM EST
